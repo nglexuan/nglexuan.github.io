@@ -250,12 +250,12 @@ Lab).</p>
 <p>The implementation of a Naïve Bayes Spam Filter is relatively straight forward using scikit-learn, however, this library hides the implementation details (and many solutions are available on the Internet).  Therefore, this task does not permit the use of the scikit-learn library or similar libraries that perform similar tasks.  We hope that this will help with your understanding of the implementation details.</p>
 <p>Bayes Theorem can give us the probability that a message is spam S for a given event E</p>
 <h1>
-\[P\left(S\middle|\ E\right)=\frac{P\left(E\middle|\ S\right)P\left(S\right)}{P\left(E\middle|\ S\right)P\left(S\right)+P\left(E|\lnot S\right)P\left(\lnot S\right)}\]
+$P\left(S\middle|\ E\right)=\frac{P\left(E\middle|\ S\right)P\left(S\right)}{P\left(E\middle|\ S\right)P\left(S\right)+P\left(E|\lnot S\right)P\left(\lnot S\right)}\]
 </h1>
 <p>Where:</p>
-<p>\[P\left(S\middle|\ E\right)\[, the probability that the message is spam given the event occurred.</p>
-<p>\[P\left(S\right)\[, the prior probability that a message is spam.</p>
-<p>\[P\left(\lnot S\right)\[, the prior probability that a message is not spam.  </p>
+<p>$P\left(S\middle|\ E\right)$, the probability that the message is spam given the event occurred.</p>
+<p>$P\left(S\right)$, the prior probability that a message is spam.</p>
+<p>$P\left(\lnot S\right)$, the prior probability that a message is not spam.  </p>
 <p>Note: <span class="math inline"><em>P</em>(<em>S</em>)</span> and
 <span class="math inline"><em>P</em>(¬<em>S</em>)</span> are prior
 values, or prior beliefs. This value could be calculated using the
@@ -263,8 +263,8 @@ number of spam and number of ham classifications in the data set. You
 could also use arbitrary values, for example; you could assume that of
 all email messages sent, 80% of them are spam and 20% of them are not
 spam. The success of the filter depends on the prior values.</p>
-<p>\[P\left(E\middle|\ S\right)\[, the probability that event E occurs in a spam emails.</p>
-<p>\[P\left(E|\lnot S\right)\[, the probability that event E occurs in non-spam emails.</p>
+<p>$P\left(E\middle|\ S\right)$, the probability that event E occurs in a spam emails.</p>
+<p>$P\left(E|\lnot S\right)$, the probability that event E occurs in non-spam emails.</p>
 <h3>Additional Libraries</h3>
 <p>As you progress through the exercises you may need additional libraries that are not installed, for example when visualising the data you may need to import WordCloud.  If you use [Google Colaboratory](https://colab.research.google.com/notebooks/intro.ipynb) the necessary libraries will be available, which will save you having to pip install.  </p>
 <h3>The Implementation</h3>
@@ -1803,12 +1803,12 @@ src="vertopal_dd80f328aab2483d9aa4ba7f428eabb9/0b3d3d3639cc9df9bf8c7e6d9b6afa300
 </div>
 </div>
 <div class="cell markdown" id="bVpFmJ5kX_HG">
-<h3>6.  Calculate \[P\left(E\middle| S\right)\[ and \[P\left(E|\lnot S\right)\[</h3>
+<h3>6.  Calculate $P\left(E\middle| S\right)$ and $P\left(E|\lnot S\right)$</h3>
 <p>Next create a new DataFrame named word_prob that gives the probability of each word being found in a spam and ham message.</p>
 <p>To calculate the probability of a word being spam you divide the number of times the word was found in spam by the total number of spam messages, likewise to calculate the probability of each word being found in a ham message you divide the number of times the word was found in a ham message by the total number of ham messages.</p>
 <p>If a word was not found in ham or spam it will cause problems later because the probability calculated will be zero. Therefore, use a pseudocount k and estimate the probability of seeing the word. This is known as smoothing and results in the following formula when k = 0.5, for example.</p>
-<p>\[P\left(E\middle| S\right)\[ = (number of spams containing the word + k) / (total number of spam messages + 2 * k).</p>
-<p>Likewise, for \[P\left(E|\lnot S\right)\[.</p>
+<p>$P\left(E\middle| S\right)$ = (number of spams containing the word + k) / (total number of spam messages + 2 * k).</p>
+<p>Likewise, for $P\left(E|\lnot S\right)$.</p>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -2178,10 +2178,10 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a h
 </div>
 <div class="cell markdown" id="iagF4brWA5QO">
 <h3>7. Checking the 'spamliness' of a single word</h3>
-<p>Now that we have trained the model, we will test the model.  Before we use the test_data, first let’s check how the model calculates the spamliness of a single word.  This is where we use the Bayes Theorem formula.  We have already calculated \[P\left(E\middle| S\right)\[ and \[P\left(E|\lnot S\right)\[, so we can just extract these values from the word_prob DataFrame.</p>
-<p>We need to decide on the prior values \[P\left(S\right)\[ and \[P\left(\lnot S\right)\[, this is where you can experiment and tweak the model, in this example the prior value for spam was set to \[0.4\[ and the prior value for not spam or ham was set to \[0.6\[.</p>
+<p>Now that we have trained the model, we will test the model.  Before we use the test_data, first let’s check how the model calculates the spamliness of a single word.  This is where we use the Bayes Theorem formula.  We have already calculated $P\left(E\middle| S\right)$ and $P\left(E|\lnot S\right)$, so we can just extract these values from the word_prob DataFrame.</p>
+<p>We need to decide on the prior values $P\left(S\right)$ and $P\left(\lnot S\right)$, this is where you can experiment and tweak the model, in this example the prior value for spam was set to $0.4$ and the prior value for not spam or ham was set to $0.6$.</p>
 <h3>
-\[P\left(S\middle|\ E\right)=\frac{P\left(E\middle|\ S\right)P\left(S\right)}{P\left(E\middle|\ S\right)P\left(S\right)+P\left(E|\lnot S\right)P\left(\lnot S\right)}\[
+$P\left(S\middle|\ E\right)=\frac{P\left(E\middle|\ S\right)P\left(S\right)}{P\left(E\middle|\ S\right)P\left(S\right)+P\left(E|\lnot S\right)P\left(\lnot S\right)}$
 </h3>
 <pre>
 Output
@@ -2225,7 +2225,7 @@ P(¬S|E) = 0.6602453616949032
 <div class="cell markdown" id="NiU4nDFrNW-7">
 <h3>8. Checking the 'spamliness' of several words</h3>
 <p>To check the spamliness of several words contained in a message we multiply the probabilities.  The model assumes the words appear as independent events hence the naïve Bayes.  In reality of course, words are not independent events, but the model still performs well.  So we use the assumption that the words appear independently, and hence we multiply probabilities, so
-\[P(S\,|\, x_1,\dots,x_n)\approx \frac{P(S)\underset{i=1}{\overset{n}{\prod}}P(x_i | S)}{P(S)\underset{i=1}{\overset{n}{\prod}}P(x_i | S)+P(\neg S)\underset{i=1}{\overset{n}{\prod}}P(x_i | \neg S)}\[
+$P(S\,|\, x_1,\dots,x_n)\approx \frac{P(S)\underset{i=1}{\overset{n}{\prod}}P(x_i | S)}{P(S)\underset{i=1}{\overset{n}{\prod}}P(x_i | S)+P(\neg S)\underset{i=1}{\overset{n}{\prod}}P(x_i | \neg S)}$
 
 Calculate the probability for each word in a message being spam, you might want to store the calculations in a list named prob_spam.  Likewise create a list for each word not being spam.
 Then multiply the probabilities and compare the results.  If the result of multiplying the probabilities for spam is greater than the result of multiplying the probabilities for not spam, then you assume the message as spam.
@@ -2252,11 +2252,11 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a h
 </div>
 <div class="cell markdown" id="oE6CsYaev-w_">
 <h3>9. Avoiding floating point underflow</h3>
-<p>Our aim is to compare two probabilities \[P(S|x_1,\dots,x_n)\[ with \[P(\neg S|x_1,\dots,x_n),\[ according to our model introduced in Section 8, both probabilities share a common denominator which does not affect comparison. Hence we will calculate numerators only, which are proportional to \[P(S|x_1,\dots,x_n)\[ and \[P(\neg S|x_1,\dots,x_n).\[
+<p>Our aim is to compare two probabilities $P(S|x_1,\dots,x_n)$ with $P(\neg S|x_1,\dots,x_n),$ according to our model introduced in Section 8, both probabilities share a common denominator which does not affect comparison. Hence we will calculate numerators only, which are proportional to $P(S|x_1,\dots,x_n)$ and $P(\neg S|x_1,\dots,x_n).$
 </p>
 <p>Multiplying a set of small probabilities could result in a floating-point error.  This is where the product becomes too small to be represented correctly.  To avoid this we can take the logarithm of the probabilities and add them.  
 
-To avoid multiplication of small numbers, we use the following property of \[\log(x):\[</p>
+To avoid multiplication of small numbers, we use the following property of $\log(x):$</p>
 <p><span
 class="math display">log (<em>a</em>⋅<em>b</em>) = log (<em>a</em>) + log (<em>b</em>)</span>
 <p>i.e. the log of the product is equal to the sum of logs (so instead
