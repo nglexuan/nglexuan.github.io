@@ -1,0 +1,2377 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>713926a46b0247f8a6bfb404219eaa28</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+id="NBt7mjkyA312" data-outputId="f74eb52a-8623-4d7e-bb50-ce2fcf7da6fb">
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google.colab <span class="im">import</span> drive</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>drive.mount(<span class="st">&#39;/content/drive&#39;</span>)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount(&quot;/content/drive&quot;, force_remount=True).
+</code></pre>
+</div>
+</div>
+<div class="cell markdown" id="EAdECfOXX_Gv">
+<h1>Introduction</h1>
+<p>In these lab notes we will introduce you to Naïve Bayes and your task is to implement a relatively simple spam filter.  We will use a small data set to train and test the model (available on Blackboard). </p>
+<p><b>Note:</b> Use Jupyter Notebook or Google Colab (NOT Jupyter
+Lab).</p>
+<p>The messages within the datasets have already been classified as ham (not spam), or spam. </p>
+<p>The implementation of a Naïve Bayes Spam Filter is relatively straight forward using scikit-learn, however, this library hides the implementation details (and many solutions are available on the Internet).  Therefore, this task does not permit the use of the scikit-learn library or similar libraries that perform similar tasks.  We hope that this will help with your understanding of the implementation details.</p>
+<p>Bayes Theorem can give us the probability that a message is spam S for a given event E</p>
+<h1>
+$P\left(S\middle|\ E\right)=\frac{P\left(E\middle|\ S\right)P\left(S\right)}{P\left(E\middle|\ S\right)P\left(S\right)+P\left(E|\lnot S\right)P\left(\lnot S\right)}$
+</h1>
+<p>Where:</p>
+<p>$P\left(S\middle|\ E\right)$, the probability that the message is spam given the event occurred.</p>
+<p>$P\left(S\right)$, the prior probability that a message is spam.</p>
+<p>$P\left(\lnot S\right)$, the prior probability that a message is not spam.  </p>
+<p>Note: <span class="math inline"><em>P</em>(<em>S</em>)</span> and
+<span class="math inline"><em>P</em>(¬<em>S</em>)</span> are prior
+values, or prior beliefs. This value could be calculated using the
+number of spam and number of ham classifications in the data set. You
+could also use arbitrary values, for example; you could assume that of
+all email messages sent, 80% of them are spam and 20% of them are not
+spam. The success of the filter depends on the prior values.</p>
+<p>$P\left(E\middle|\ S\right)$, the probability that event E occurs in a spam emails.</p>
+<p>$P\left(E|\lnot S\right)$, the probability that event E occurs in non-spam emails.</p>
+<h3>Additional Libraries</h3>
+<p>As you progress through the exercises you may need additional libraries that are not installed, for example when visualising the data you may need to import WordCloud.  If you use [Google Colaboratory](https://colab.research.google.com/notebooks/intro.ipynb) the necessary libraries will be available, which will save you having to pip install.  </p>
+<h3>The Implementation</h3>
+<p>We have tried to keep the implementation quite simple and therefore not accounted for things like filtering small often used words, nor does the implementation calculate probabilities of a word in the frequency list not appearing in spam.  We have also filtered things like telephone numbers, which could be used to identify spam.   The final exercise allows you to make recommendations how the model could be improved.    </p>
+</div>
+<div class="cell markdown" id="ep6k47M5X_Gw">
+<h3>1.  Read the dataset into a dataframe and explore</h3>
+<p>Start by importing pandas and read the dataset into a DataFrame named df.  Output the first 20 rows of the dataframe to get a general feel of how the data is structured.</p>
+<p>You may encounter the error: UnicodeDecodeError: 'utf-8' codec can't decode bytes in position 135-136: invalid continuation byte.  You don't need to edit the datafile.  I was able to successfully read in the datafile by changing the encoding to latin-1.</p>
+<p>[1 Mark]</p>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:677}"
+id="vq43eDWcX_Gx" data-outputId="ce313632-9dda-4d91-ee47-1a5987baae3f">
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">&quot;/content/drive/MyDrive/Colab Notebooks/google colab data science labs/spam.csv&quot;</span>, encoding <span class="op">=</span> <span class="st">&quot;latin-1&quot;</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>df.head(<span class="dv">20</span>)</span></code></pre></div>
+<div class="output execute_result" data-execution_count="70">
+
+  <div id="df-e48a5ceb-5341-47e4-8f91-2f0b4e6e2300" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>v1</th>
+      <th>v2</th>
+      <th>Unnamed: 2</th>
+      <th>Unnamed: 3</th>
+      <th>Unnamed: 4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ham</td>
+      <td>Go until jurong point, crazy.. Available only ...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ham</td>
+      <td>Ok lar... Joking wif u oni...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>spam</td>
+      <td>Free entry in 2 a wkly comp to win FA Cup fina...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ham</td>
+      <td>U dun say so early hor... U c already then say...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ham</td>
+      <td>Nah I don't think he goes to usf, he lives aro...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>spam</td>
+      <td>FreeMsg Hey there darling it's been 3 week's n...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>ham</td>
+      <td>Even my brother is not like to speak with me. ...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>ham</td>
+      <td>As per your request 'Melle Melle (Oru Minnamin...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>spam</td>
+      <td>WINNER!! As a valued network customer you have...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>spam</td>
+      <td>Had your mobile 11 months or more? U R entitle...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>ham</td>
+      <td>I'm gonna be home soon and i don't want to tal...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>spam</td>
+      <td>SIX chances to win CASH! From 100 to 20,000 po...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>spam</td>
+      <td>URGENT! You have won a 1 week FREE membership ...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>ham</td>
+      <td>I've been searching for the right words to tha...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>ham</td>
+      <td>I HAVE A DATE ON SUNDAY WITH WILL!!</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>spam</td>
+      <td>XXXMobileMovieClub: To use your credit, click ...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>ham</td>
+      <td>Oh k...i'm watching here:)</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>ham</td>
+      <td>Eh u remember how 2 spell his name... Yes i di...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>ham</td>
+      <td>Fine if thatåÕs the way u feel. ThatåÕs the wa...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>spam</td>
+      <td>England v Macedonia - dont miss the goals/team...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-e48a5ceb-5341-47e4-8f91-2f0b4e6e2300')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-e48a5ceb-5341-47e4-8f91-2f0b4e6e2300 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-e48a5ceb-5341-47e4-8f91-2f0b4e6e2300');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-17af086a-0c18-4dc4-8b57-e8ad9c0911a3">
+  <button class="colab-df-quickchart" onclick="quickchart('df-17af086a-0c18-4dc4-8b57-e8ad9c0911a3')"
+            title="Suggest charts"
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-17af086a-0c18-4dc4-8b57-e8ad9c0911a3 button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+    </div>
+  </div>
+
+</div>
+</div>
+<div class="cell markdown" id="W1HwlygYX_G2">
+<h3>2. Clean the data</h3>
+<p>We are only interested in words, clean the data so that all punctuations are removed.  You should be left with a dataset that only contains alpha characters (including spaces).  You should also ensure all the words are lowercase.  Store the cleaned data into a DataFrame named clean.</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Category</th>
+      <th>Message</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ham</td>
+      <td>go until jurong point crazy available only in ...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ham</td>
+      <td>ok lar joking wif u oni</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>spam</td>
+      <td>free entry in  a wkly comp to win fa cup final...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ham</td>
+      <td>u dun say so early hor u c already then say</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ham</td>
+      <td>nah i dont think he goes to usf he lives aroun...</td>
+    </tr>
+  </tbody>
+</table>
+<p>[2 Marks]</p>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:458}"
+id="JqppPCO_X_G3" data-outputId="54c791b2-ce13-4a2a-8b97-2410c2e5758a">
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>clean <span class="op">=</span> df[[<span class="st">&#39;v1&#39;</span>, <span class="st">&#39;v2&#39;</span>]]</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>clean <span class="op">=</span> clean.rename(columns <span class="op">=</span> {<span class="st">&quot;v1&quot;</span>: <span class="st">&quot;Category&quot;</span>, <span class="st">&quot;v2&quot;</span>: <span class="st">&quot;Message&quot;</span>})</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>clean[<span class="st">&quot;Message&quot;</span>] <span class="op">=</span> clean[<span class="st">&quot;Message&quot;</span>].<span class="bu">str</span>.lower().<span class="bu">str</span>.replace(<span class="st">&#39;[^\w\s]&#39;</span>,<span class="st">&#39;&#39;</span>).<span class="bu">str</span>.replace(<span class="st">&#39;\d+&#39;</span>,<span class="st">&#39;&#39;</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>clean</span></code></pre></div>
+<div class="output stream stderr">
+<pre><code>&lt;ipython-input-71-af0888adc834&gt;:3: FutureWarning: The default value of regex will change from True to False in a future version.
+  clean[&quot;Message&quot;] = clean[&quot;Message&quot;].str.lower().str.replace(&#39;[^\w\s]&#39;,&#39;&#39;).str.replace(&#39;\d+&#39;,&#39;&#39;)
+</code></pre>
+</div>
+<div class="output execute_result" data-execution_count="71">
+
+  <div id="df-2fda2174-639e-4f1c-8846-90c63248fd11" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Category</th>
+      <th>Message</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ham</td>
+      <td>go until jurong point crazy available only in ...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ham</td>
+      <td>ok lar joking wif u oni</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>spam</td>
+      <td>free entry in  a wkly comp to win fa cup final...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ham</td>
+      <td>u dun say so early hor u c already then say</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ham</td>
+      <td>nah i dont think he goes to usf he lives aroun...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>5567</th>
+      <td>spam</td>
+      <td>this is the nd time we have tried  contact u u...</td>
+    </tr>
+    <tr>
+      <th>5568</th>
+      <td>ham</td>
+      <td>will ì_ b going to esplanade fr home</td>
+    </tr>
+    <tr>
+      <th>5569</th>
+      <td>ham</td>
+      <td>pity  was in mood for that soany other suggest...</td>
+    </tr>
+    <tr>
+      <th>5570</th>
+      <td>ham</td>
+      <td>the guy did some bitching but i acted like id ...</td>
+    </tr>
+    <tr>
+      <th>5571</th>
+      <td>ham</td>
+      <td>rofl its true to its name</td>
+    </tr>
+  </tbody>
+</table>
+<p>5572 rows × 2 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-2fda2174-639e-4f1c-8846-90c63248fd11')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-2fda2174-639e-4f1c-8846-90c63248fd11 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-2fda2174-639e-4f1c-8846-90c63248fd11');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-73079d60-e042-4523-b4db-e44141753fcb">
+  <button class="colab-df-quickchart" onclick="quickchart('df-73079d60-e042-4523-b4db-e44141753fcb')"
+            title="Suggest charts"
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-73079d60-e042-4523-b4db-e44141753fcb button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+    </div>
+  </div>
+
+</div>
+</div>
+<div class="cell markdown" id="CLTcpAMvX_G8">
+<h3>3. Split the Data</h3>
+<p>
+<p>Split the data into two random samples, one for training the model
+and the other for testing the model. Create DataFrames named train_data
+and test_data. The train_data DataFrame should contain 75% of the data
+and the test_data DataFrame the remaining 25%.<p></p>
+<p>[1 Mark]</p>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:424}"
+id="fgKwaz1yX_G9" data-outputId="5178481c-3128-41e2-fd55-73d13e356412">
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>train_data <span class="op">=</span> clean.sample(frac <span class="op">=</span> <span class="fl">0.75</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>test_data <span class="op">=</span> clean.drop(train_data.index)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>train_data</span></code></pre></div>
+<div class="output execute_result" data-execution_count="72">
+
+  <div id="df-b7160519-9592-4562-b268-f6b3269a9816" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Category</th>
+      <th>Message</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3107</th>
+      <td>ham</td>
+      <td>hello hun how ru its here by the way im good b...</td>
+    </tr>
+    <tr>
+      <th>2380</th>
+      <td>ham</td>
+      <td>if i let you do this i want you in the house b...</td>
+    </tr>
+    <tr>
+      <th>5312</th>
+      <td>ham</td>
+      <td>here got ur favorite oyster n got my favorite ...</td>
+    </tr>
+    <tr>
+      <th>2943</th>
+      <td>spam</td>
+      <td>we currently have a message awaiting your coll...</td>
+    </tr>
+    <tr>
+      <th>5406</th>
+      <td>ham</td>
+      <td>dear are you angry i was busy dear</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1350</th>
+      <td>ham</td>
+      <td>bugis oso near wat</td>
+    </tr>
+    <tr>
+      <th>1736</th>
+      <td>ham</td>
+      <td>i will come tomorrow di</td>
+    </tr>
+    <tr>
+      <th>186</th>
+      <td>ham</td>
+      <td>haha awesome be there in a minute</td>
+    </tr>
+    <tr>
+      <th>3281</th>
+      <td>ham</td>
+      <td>hey you around ive got enough for a half  the ...</td>
+    </tr>
+    <tr>
+      <th>2639</th>
+      <td>ham</td>
+      <td>why she wants to talk to me</td>
+    </tr>
+  </tbody>
+</table>
+<p>4179 rows × 2 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-b7160519-9592-4562-b268-f6b3269a9816')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-b7160519-9592-4562-b268-f6b3269a9816 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-b7160519-9592-4562-b268-f6b3269a9816');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-7e2a866d-8f4a-4751-8d82-e2cf047a5173">
+  <button class="colab-df-quickchart" onclick="quickchart('df-7e2a866d-8f4a-4751-8d82-e2cf047a5173')"
+            title="Suggest charts"
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-7e2a866d-8f4a-4751-8d82-e2cf047a5173 button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+    </div>
+  </div>
+
+</div>
+</div>
+<div class="cell markdown" id="EU8azvVgX_HB">
+<h3>4. Create a Word Frequency DataFrame</h3>
+<p>Create a new DataFrame named word_freq that contains each word with the number of times it appears in a spam and a ham message.  You should use the train_data not the test_data.</p>
+<p>Below is an example of what the DataFrame would look like, <i>note</i> that your values may differ depending on how the data was split.</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Word</th>
+      <th>#Spam</th>
+      <th>#Ham</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>go</td>
+      <td>27</td>
+      <td>196</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>until</td>
+      <td>4</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>jurong</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>point</td>
+      <td>1</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>crazy</td>
+      <td>4</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <td>7253</td>
+      <td>salesman</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>7254</td>
+      <td>pity</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>7255</td>
+      <td>soany</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>7256</td>
+      <td>suggestions</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>7257</td>
+      <td>bitching</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>[2 Marks]</p>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:424}"
+id="SqlKk77nKEUc" data-outputId="40de99d6-fecd-478b-d992-1e6192c67a31">
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>spam <span class="op">=</span> train_data[train_data[<span class="st">&#39;Category&#39;</span>] <span class="op">==</span> <span class="st">&#39;spam&#39;</span>]</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>spamexplode <span class="op">=</span> spam.assign(Spam <span class="op">=</span> spam[<span class="st">&#39;Message&#39;</span>].<span class="bu">str</span>.split(<span class="st">&#39;\s&#39;</span>)).explode(<span class="st">&#39;Spam&#39;</span>)[<span class="st">&#39;Spam&#39;</span>].to_frame()</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>ham <span class="op">=</span> train_data[train_data[<span class="st">&#39;Category&#39;</span>] <span class="op">==</span> <span class="st">&#39;ham&#39;</span>]</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>hamexplode <span class="op">=</span> ham.assign(Ham <span class="op">=</span> ham[<span class="st">&#39;Message&#39;</span>].<span class="bu">str</span>.split(<span class="st">&#39;\s&#39;</span>)).explode(<span class="st">&#39;Ham&#39;</span>)[<span class="st">&#39;Ham&#39;</span>].to_frame()</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> spamexplode[<span class="st">&#39;Spam&#39;</span>].value_counts().to_frame()</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>h <span class="op">=</span> hamexplode[<span class="st">&#39;Ham&#39;</span>].value_counts().to_frame()</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>s.index.name <span class="op">=</span> <span class="st">&#39;Word&#39;</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>h.index.name <span class="op">=</span> <span class="st">&#39;Word&#39;</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>word_freq <span class="op">=</span> s.join(h)</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>word_freq.columns <span class="op">=</span> [<span class="st">&#39;#Spam&#39;</span>, <span class="st">&#39;#Ham&#39;</span>]</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>word_freq <span class="op">=</span> word_freq.reset_index().fillna(<span class="dv">0</span>)</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>word_freq</span></code></pre></div>
+<div class="output execute_result" data-execution_count="73">
+
+  <div id="df-f88f5328-21f7-427f-ab35-0f1a41c4b492" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Word</th>
+      <th>#Spam</th>
+      <th>#Ham</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td></td>
+      <td>1297</td>
+      <td>1762.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>to</td>
+      <td>509</td>
+      <td>1164.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>a</td>
+      <td>303</td>
+      <td>803.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>call</td>
+      <td>250</td>
+      <td>171.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>you</td>
+      <td>212</td>
+      <td>1384.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1974</th>
+      <td>freenokia</td>
+      <td>1</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1975</th>
+      <td>oroptouthvd</td>
+      <td>1</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1976</th>
+      <td>wanting</td>
+      <td>1</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>1977</th>
+      <td>vid</td>
+      <td>1</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1978</th>
+      <td>wwwphbcom</td>
+      <td>1</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>1979 rows × 3 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-f88f5328-21f7-427f-ab35-0f1a41c4b492')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-f88f5328-21f7-427f-ab35-0f1a41c4b492 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-f88f5328-21f7-427f-ab35-0f1a41c4b492');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-0cdca839-14fc-4ad3-b3ef-3cc1ca2469bd">
+  <button class="colab-df-quickchart" onclick="quickchart('df-0cdca839-14fc-4ad3-b3ef-3cc1ca2469bd')"
+            title="Suggest charts"
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-0cdca839-14fc-4ad3-b3ef-3cc1ca2469bd button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+    </div>
+  </div>
+
+</div>
+</div>
+<div class="cell markdown" id="1DBTOQpJbSqE">
+<h3>5. Visualise the Data</h3>
+<p>Let's use a Word Cloud library to visualise the most common words contained in spam messages.</p>
+<p><a
+href="https://drive.google.com/open?id=1lVRGHtMB1AMJf-JSi7MmcHbZB_BvBhGC">Example
+of a Word Cloud Image</a></p>
+<p>[3 Marks]</p>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:635}"
+id="2mmdY8jWbkgS" data-outputId="c8fc57c6-902c-4f5b-8793-d6f2a1dda30c">
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> wordcloud</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> wordcloud <span class="im">import</span> WordCloud</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>mostspam <span class="op">=</span> word_freq.sort_values(<span class="st">&#39;#Spam&#39;</span>, ascending <span class="op">=</span> <span class="va">False</span>)[<span class="st">&#39;Word&#39;</span>]</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>wordcloud <span class="op">=</span> WordCloud().generate(<span class="bu">str</span>(mostspam))</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>mostspam <span class="op">=</span> mostspam.fillna(value <span class="op">=</span> <span class="st">&quot; &quot;</span>)</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>ws <span class="op">=</span> <span class="st">&quot; &quot;</span>.join(mostspam.<span class="bu">str</span>.lower())</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize <span class="op">=</span> (<span class="dv">15</span>,<span class="dv">15</span>))</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>wc <span class="op">=</span> WordCloud(background_color <span class="op">=</span> <span class="st">&quot;midnightblue&quot;</span>)</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>wc.generate(ws)</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>plt.imshow(wc.recolor( colormap<span class="op">=</span> <span class="st">&#39;RdPu&#39;</span> , random_state<span class="op">=</span><span class="dv">18</span>), interpolation<span class="op">=</span><span class="st">&quot;bilinear&quot;</span>)</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>plt.axis(<span class="st">&#39;off&#39;</span>)</span></code></pre></div>
+<div class="output execute_result" data-execution_count="74">
+<pre><code>(-0.5, 399.5, 199.5, -0.5)</code></pre>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_dd80f328aab2483d9aa4ba7f428eabb9/0b3d3d3639cc9df9bf8c7e6d9b6afa300232d5a8.png" /></p>
+</div>
+</div>
+<div class="cell markdown" id="bVpFmJ5kX_HG">
+<h3>6.  Calculate $P\left(E\middle| S\right)$ and $P\left(E|\lnot S\right)$</h3>
+<p>Next create a new DataFrame named word_prob that gives the probability of each word being found in a spam and ham message.</p>
+<p>To calculate the probability of a word being spam you divide the number of times the word was found in spam by the total number of spam messages, likewise to calculate the probability of each word being found in a ham message you divide the number of times the word was found in a ham message by the total number of ham messages.</p>
+<p>If a word was not found in ham or spam it will cause problems later because the probability calculated will be zero. Therefore, use a pseudocount k and estimate the probability of seeing the word. This is known as smoothing and results in the following formula when k = 0.5, for example.</p>
+<p>$P\left(E\middle| S\right)$ = (number of spams containing the word + k) / (total number of spam messages + 2 * k).</p>
+<p>Likewise, for $P\left(E|\lnot S\right)$.</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Word</th>
+      <th>P(E|S)</th>
+      <th>P(E|¬S)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>go</td>
+      <td>0.053322</td>
+      <td>0.050055</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>until</td>
+      <td>0.011364</td>
+      <td>0.004275</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>jurong</td>
+      <td>0.002622</td>
+      <td>0.000138</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>point</td>
+      <td>0.002622</td>
+      <td>0.002344</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>crazy</td>
+      <td>0.011364</td>
+      <td>0.002344</td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p>[2 Marks]</p></p>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:424}"
+id="U2kaXmftX_HH" data-outputId="65dcf353-d443-476d-b3a4-5fe803410a3b">
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>sumspam <span class="op">=</span> <span class="bu">sum</span>(word_freq[<span class="st">&#39;#Spam&#39;</span>])</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>sumham <span class="op">=</span> <span class="bu">sum</span>(word_freq[<span class="st">&#39;#Ham&#39;</span>])</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="fl">0.5</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>word_freq[<span class="st">&#39;P(E|S)&#39;</span>] <span class="op">=</span> (word_freq[<span class="st">&#39;#Spam&#39;</span>] <span class="op">+</span> k)<span class="op">/</span> (sumspam <span class="op">+</span> <span class="dv">2</span><span class="op">*</span>k)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>word_freq[<span class="st">&#39;P(E|¬S)&#39;</span>] <span class="op">=</span> (word_freq[<span class="st">&#39;#Ham&#39;</span>] <span class="op">+</span> k)<span class="op">/</span> (sumham <span class="op">+</span> <span class="dv">2</span><span class="op">*</span>k)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>word_prob <span class="op">=</span> word_freq[[<span class="st">&#39;Word&#39;</span>,<span class="st">&#39;P(E|S)&#39;</span>, <span class="st">&#39;P(E|¬S)&#39;</span>]].copy()</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>word_prob</span></code></pre></div>
+<div class="output execute_result" data-execution_count="75">
+
+  <div id="df-501878a7-5617-43f1-a232-a587bef60242" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Word</th>
+      <th>P(E|S)</th>
+      <th>P(E|¬S)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td></td>
+      <td>0.099212</td>
+      <td>0.049108</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>to</td>
+      <td>0.038959</td>
+      <td>0.032446</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>a</td>
+      <td>0.023207</td>
+      <td>0.022388</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>call</td>
+      <td>0.019154</td>
+      <td>0.004778</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>you</td>
+      <td>0.016249</td>
+      <td>0.038576</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>1974</th>
+      <td>freenokia</td>
+      <td>0.000115</td>
+      <td>0.000014</td>
+    </tr>
+    <tr>
+      <th>1975</th>
+      <td>oroptouthvd</td>
+      <td>0.000115</td>
+      <td>0.000014</td>
+    </tr>
+    <tr>
+      <th>1976</th>
+      <td>wanting</td>
+      <td>0.000115</td>
+      <td>0.000098</td>
+    </tr>
+    <tr>
+      <th>1977</th>
+      <td>vid</td>
+      <td>0.000115</td>
+      <td>0.000014</td>
+    </tr>
+    <tr>
+      <th>1978</th>
+      <td>wwwphbcom</td>
+      <td>0.000115</td>
+      <td>0.000014</td>
+    </tr>
+  </tbody>
+</table>
+<p>1979 rows × 3 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-501878a7-5617-43f1-a232-a587bef60242')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-501878a7-5617-43f1-a232-a587bef60242 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-501878a7-5617-43f1-a232-a587bef60242');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-a618323c-22a6-4ecd-aca8-649ef1f5b75a">
+  <button class="colab-df-quickchart" onclick="quickchart('df-a618323c-22a6-4ecd-aca8-649ef1f5b75a')"
+            title="Suggest charts"
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-a618323c-22a6-4ecd-aca8-649ef1f5b75a button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+    </div>
+  </div>
+
+</div>
+</div>
+<div class="cell markdown" id="iagF4brWA5QO">
+<h3>7. Checking the 'spamliness' of a single word</h3>
+<p>Now that we have trained the model, we will test the model.  Before we use the test_data, first let’s check how the model calculates the spamliness of a single word.  This is where we use the Bayes Theorem formula.  We have already calculated $P\left(E\middle| S\right)$ and $P\left(E|\lnot S\right)$, so we can just extract these values from the word_prob DataFrame.</p>
+<p>We need to decide on the prior values $P\left(S\right)$ and $P\left(\lnot S\right)$, this is where you can experiment and tweak the model, in this example the prior value for spam was set to $0.4$ and the prior value for not spam or ham was set to $0.6$.</p>
+<h3>
+$P\left(S\middle|\ E\right)=\frac{P\left(E\middle|\ S\right)P\left(S\right)}{P\left(E\middle|\ S\right)P\left(S\right)+P\left(E|\lnot S\right)P\left(\lnot S\right)}$
+</h3>
+<pre>
+Output
+Word = ['free']
+P(E|S) = [0.29108392]
+P(E|¬S) = [0.01365141]
+P(S|E) = [0.93427577]
+P(¬S|E) = [0.06572423]
+</pre>
+<p>[2 Marks]</p>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+id="NS-KBvz4-YhJ" data-outputId="8ab63458-509d-4ad4-e1e7-a3c240844ce2">
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> <span class="fl">0.3</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>not_s <span class="op">=</span> <span class="fl">0.7</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> function(word):</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  es <span class="op">=</span> word_prob[word_prob[<span class="st">&#39;Word&#39;</span>] <span class="op">==</span> word][<span class="st">&#39;P(E|S)&#39;</span>].iloc[<span class="dv">0</span>]</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  e_not_s <span class="op">=</span> word_prob[word_prob[<span class="st">&#39;Word&#39;</span>] <span class="op">==</span> word][<span class="st">&#39;P(E|¬S)&#39;</span>].iloc[<span class="dv">0</span>]</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  se <span class="op">=</span> (es <span class="op">*</span> s)<span class="op">/</span>((es <span class="op">*</span> s) <span class="op">+</span> (e_not_s <span class="op">*</span> not_s))</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  not_se <span class="op">=</span> (e_not_s <span class="op">*</span> not_s)<span class="op">/</span>((e_not_s <span class="op">*</span> not_s) <span class="op">+</span> (es <span class="op">*</span> s))</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;Word = [&#39;&quot;</span>, word, <span class="st">&quot;&#39;]&quot;</span>)</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;P(E|S) =&quot;</span>, es)</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;P(E|¬S) =&quot;</span>, e_not_s)</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;P(S|E) =&quot;</span>, se)</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;P(¬S|E) =&quot;</span>, not_se)</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>function(<span class="st">&#39;to&#39;</span>)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>Word = [&#39; to &#39;]
+P(E|S) = 0.0389585563541826
+P(E|¬S) = 0.032446363889662856
+P(S|E) = 0.3397546383050967
+P(¬S|E) = 0.6602453616949032
+</code></pre>
+</div>
+</div>
+<div class="cell markdown" id="NiU4nDFrNW-7">
+<h3>8. Checking the 'spamliness' of several words</h3>
+<p>To check the spamliness of several words contained in a message we multiply the probabilities.  The model assumes the words appear as independent events hence the naïve Bayes.  In reality of course, words are not independent events, but the model still performs well.  So we use the assumption that the words appear independently, and hence we multiply probabilities, so
+$P(S\,|\, x_1,\dots,x_n)\approx \frac{P(S)\underset{i=1}{\overset{n}{\prod}}P(x_i | S)}{P(S)\underset{i=1}{\overset{n}{\prod}}P(x_i | S)+P(\neg S)\underset{i=1}{\overset{n}{\prod}}P(x_i | \neg S)}$
+
+Calculate the probability for each word in a message being spam, you might want to store the calculations in a list named prob_spam.  Likewise create a list for each word not being spam.
+Then multiply the probabilities and compare the results.  If the result of multiplying the probabilities for spam is greater than the result of multiplying the probabilities for not spam, then you assume the message as spam.
+</p>
+<p>If you have a word in your message that is not in the word_prob DataFrame then you can't get the probability.  Skip any words in the message that are not in the word_prob DataFrame.</p>
+<p>[2 Marks]</p>
+</div>
+<div class="cell code" id="PGK027jUNlU7">
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> function(message_row):</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  message <span class="op">=</span> message_row[<span class="st">&#39;Message&#39;</span>].values[<span class="dv">0</span>]</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  message_words <span class="op">=</span> message.split(<span class="st">&quot; &quot;</span>)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  df <span class="op">=</span> pd.DataFrame(columns <span class="op">=</span> [<span class="st">&quot;Word&quot;</span>, <span class="st">&quot;P(E|S)&quot;</span>, <span class="st">&quot;P(E|¬S)&quot;</span>])</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> word <span class="kw">in</span> message_words:</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>      df <span class="op">=</span> pd.concat[df, (word_prob[word_prob[<span class="st">&#39;Word&#39;</span>] <span class="op">==</span> word])]</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>  x_given_s <span class="op">=</span> df[<span class="st">&#39;P(E|S)&#39;</span>].product(axis <span class="op">=</span> <span class="st">&#39;rows&#39;</span>)</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>  x_given_nots <span class="op">=</span> df[<span class="st">&#39;P(E|¬S)&#39;</span>].product(axis <span class="op">=</span> <span class="st">&#39;rows&#39;</span>)</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span>((s <span class="op">*</span> x_given_s)<span class="op">/</span>((s <span class="op">*</span> x_given_s) <span class="op">+</span> (not_s <span class="op">*</span> x_given_nots)))</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a></span></code></pre></div>
+</div>
+<div class="cell markdown" id="oE6CsYaev-w_">
+<h3>9. Avoiding floating point underflow</h3>
+<p>Our aim is to compare two probabilities $P(S|x_1,\dots,x_n)$ with $P(\neg S|x_1,\dots,x_n),$ according to our model introduced in Section 8, both probabilities share a common denominator which does not affect comparison. Hence we will calculate numerators only, which are proportional to $P(S|x_1,\dots,x_n)$ and $P(\neg S|x_1,\dots,x_n).$
+</p>
+<p>Multiplying a set of small probabilities could result in a floating-point error.  This is where the product becomes too small to be represented correctly.  To avoid this we can take the logarithm of the probabilities and add them.  
+
+To avoid multiplication of small numbers, we use the following property of $\log(x):$</p>
+<p><span
+class="math display">log (<em>a</em>⋅<em>b</em>) = log (<em>a</em>) + log (<em>b</em>)</span>
+<p>i.e. the log of the product is equal to the sum of logs (so instead
+of multiplying small numbers we will add them):</p> <span
+class="math display"><em>P</em>(<em>S</em>|<em>x</em><sub>1</sub>,<em>x</em><sub>2</sub>,…,<em>x</em><sub><em>n</em></sub>) ∝ <em>P</em>(<em>S</em>) ⋅ <em>P</em>(<em>x</em><sub>1</sub>|<em>S</em>) ⋅ … ⋅ <em>P</em>(<em>x</em><sub><em>n</em></sub>|<em>S</em>)</span>
+<p>becomes</p> <span
+class="math display">log (<em>P</em>(<em>S</em>|<em>x</em><sub>1</sub>,<em>x</em><sub>2</sub>,…,<em>x</em><sub><em>n</em></sub>)) ∝ log (<em>P</em>(<em>S</em>)⋅<em>P</em>(<em>x</em><sub>1</sub>|<em>S</em>)⋅…<em>P</em>(<em>x</em><sub><em>n</em></sub>|<em>S</em>))=</span>
+<span
+class="math display">log (<em>P</em>(<em>S</em>)) + log (<em>P</em>(<em>x</em><sub>1</sub>|<em>S</em>)) + … + log (<em>P</em>(<em>x</em><sub><em>n</em></sub>|<em>S</em>))</span>
+<p>So, to check spam or ham we just compare:</p> <span
+class="math display">log (<em>P</em>(<em>S</em>)) + log (<em>P</em>(<em>x</em><sub>1</sub>|<em>S</em>)) + … + log (<em>P</em>(<em>x</em><sub><em>n</em></sub>|<em>S</em>))</span>
+<p>and </p> <span
+class="math display">log (<em>P</em>(¬<em>S</em>)) + log (<em>P</em>(<em>x</em><sub>1</sub>|¬<em>S</em>)) + … + log (<em>P</em>(<em>x</em><sub><em>n</em></sub>|¬<em>S</em>))</span></p>
+<p>Change the equation so that logs are used. </p> <p>[1 Mark]</p></p>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:70}"
+id="4JYfU0vixQFw" data-outputId="e2369741-4305-42e0-c5ef-187cfc83b26f">
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math <span class="im">as</span> m</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> function2(message_row, show):</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  message <span class="op">=</span> <span class="bu">str</span>(message_row[<span class="st">&#39;Message&#39;</span>])</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  message_words <span class="op">=</span> message.split(<span class="st">&quot; &quot;</span>)</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  df <span class="op">=</span> pd.DataFrame(columns <span class="op">=</span> [<span class="st">&quot;Word&quot;</span>, <span class="st">&quot;P(E|S)&quot;</span>, <span class="st">&quot;P(E|¬S)&quot;</span>])</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> word <span class="kw">in</span> message_words:</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>      df <span class="op">=</span> pd.concat([df, (word_prob[word_prob[<span class="st">&#39;Word&#39;</span>] <span class="op">==</span> word])])</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>  log_x_given_s <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> probability <span class="kw">in</span> <span class="bu">list</span>(df[<span class="st">&#39;P(E|S)&#39;</span>]):</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>    log_x_given_s <span class="op">+=</span> m.log(probability)</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>  log_x_given_nots <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> prob <span class="kw">in</span> <span class="bu">list</span>(df[<span class="st">&#39;P(E|¬S)&#39;</span>]):</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>    log_x_given_nots <span class="op">+=</span> m.log(prob)</span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>  p_spam <span class="op">=</span> m.log(s) <span class="op">+</span> log_x_given_s</span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>  p_ham <span class="op">=</span> m.log(not_s) <span class="op">+</span> log_x_given_nots</span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> show <span class="op">==</span> <span class="va">True</span>:</span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;log of x given s =&quot;</span>, p_spam)</span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;log of x given ¬s =&quot;</span>, p_ham)</span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> p_spam <span class="op">&lt;</span> p_ham:</span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">&quot;ham&quot;</span></span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span>:</span>
+<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">&quot;spam&quot;</span></span>
+<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a>function2(clean.sample(n<span class="op">=</span><span class="dv">1</span>), <span class="va">True</span>)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>log of x given s = -56.100090209565685
+log of x given ¬s = -48.61651313232384
+</code></pre>
+</div>
+<div class="output execute_result" data-execution_count="84">
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;type&quot;</span><span class="fu">:</span><span class="st">&quot;string&quot;</span><span class="fu">}</span></span></code></pre></div>
+</div>
+</div>
+<div class="cell markdown" id="ZtiGi5X37b0G">
+<h3>10. Testing the Model</h3>
+<p>Now that we have tested the model using simple messages.  Let’s test the model using the messages from the test_set.  You should implement counters that displays how your model has performed and calculate the accuracy of the model.</p>
+<pre>
+match_spam 173
+match_ham 843
+thought_ham_is_spam 3
+thought_spam_is_ham 357
+Accuracy: 0.7383720930232558
+</pre>
+<p>[3 Marks]</p>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+id="OOreoe6F7eri" data-outputId="01e336aa-e1d4-4208-b77b-e2f45d844b0b">
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>match_spam <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>match_ham <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>thought_ham_is_spam <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>thought_spam_is_ham <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> index, row <span class="kw">in</span> test_data.iterrows():</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> function2(row, <span class="va">False</span>) <span class="op">==</span> <span class="st">&#39;spam&#39;</span> <span class="kw">and</span> row[<span class="st">&#39;Category&#39;</span>] <span class="op">==</span> <span class="st">&#39;spam&#39;</span>:</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>    match_spam <span class="op">+=</span><span class="dv">1</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">elif</span> function2(row, <span class="va">False</span>) <span class="op">==</span> <span class="st">&#39;ham&#39;</span> <span class="kw">and</span> row[<span class="st">&#39;Category&#39;</span>] <span class="op">==</span> <span class="st">&#39;ham&#39;</span>:</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>    match_ham <span class="op">+=</span><span class="dv">1</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">elif</span> function2(row, <span class="va">False</span>) <span class="op">==</span> <span class="st">&#39;spam&#39;</span> <span class="kw">and</span> row[<span class="st">&#39;Category&#39;</span>] <span class="op">==</span> <span class="st">&#39;ham&#39;</span>:</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>    thought_ham_is_spam <span class="op">+=</span><span class="dv">1</span></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">elif</span> function2(row, <span class="va">False</span>) <span class="op">==</span> <span class="st">&#39;ham&#39;</span> <span class="kw">and</span> row[<span class="st">&#39;Category&#39;</span>] <span class="op">==</span> <span class="st">&#39;spam&#39;</span>:</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>    thought_spam_is_ham <span class="op">+=</span><span class="dv">1</span></span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;match_spam&quot;</span>, match_spam)</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;match_ham&quot;</span>, match_ham)</span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;thought_ham_is_spam&quot;</span>, thought_ham_is_spam)</span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;thought_spam_is_ham&quot;</span>, thought_spam_is_ham)</span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>accuracy <span class="op">=</span> (match_ham <span class="op">+</span> match_spam) <span class="op">/</span> (match_ham <span class="op">+</span> match_spam <span class="op">+</span> thought_ham_is_spam <span class="op">+</span> thought_spam_is_ham)</span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Accuracy: &quot;</span>, accuracy)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>match_spam 189
+match_ham 1168
+thought_ham_is_spam 25
+thought_spam_is_ham 11
+Accuracy:  0.9741564967695621
+</code></pre>
+</div>
+</div>
+<div class="cell markdown" id="fwGqqNBzDh3y">
+<h3>11. Improvements</h3>
+<p>Give some suggestions or recommendations on how the accuracy of the model could be improved.</p>
+<p>[1 Mark]</p>
+</div>
+<div class="cell markdown" id="KM5hnY3WDA2f">
+<p>A bigger sample size should improve the accuracy, but overall I think
+an accuracy of 97% is a considered a successful testing.</p>
+</div>
+<div class="cell markdown" id="u9DzUx0uiXXH">
+
+</div>
+</body>
+</html>
