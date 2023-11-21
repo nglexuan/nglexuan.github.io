@@ -224,7 +224,7 @@
     code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
     .smaller-text {
-            font-size: 12px;
+            font-size: 18px;
         }
   </style>
   <!--[if lt IE 9]>
@@ -254,17 +254,17 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a hr
 <span class = "smaller-text">\[P\left(S\middle|\ E\right)=\frac{P\left(E\middle|\ S\right)P\left(S\right)}{P\left(E\middle|\ S\right)P\left(S\right)+P\left(E|\lnot S\right)P\left(\lnot S\right)}\]</span>
 </h1>
 <p>Where:</p>
-<p>\[P\left(S\middle|\ E\right)\], the probability that the message is spam given the event occurred.</p>
-<p>\[P\left(S\right)\], the prior probability that a message is spam.</p>
-<p>\[P\left(\lnot S\right)\], the prior probability that a message is not spam.  </p>
+<p> <span class = "smaller-text">\[P\left(S\middle|\ E\right)\]</span>, the probability that the message is spam given the event occurred.</span></p>
+<p> <span class = "smaller-text">\[P\left(S\right)\]</span>, the prior probability that a message is spam.</p>
+<p> <span class = "smaller-text">\[P\left(\lnot S\right)\]</span>, the prior probability that a message is not spam.  </p>
 <p>Note: <span class="math inline"><em>P</em>(<em>S</em>)</span> and
 <span class="math inline"><em>P</em>(¬<em>S</em>)</span> are prior
 values, or prior beliefs. This value could be calculated using the
 number of spam and number of ham classifications in the data set. Arbitrary values could also be used, for example; it could be assumed that of
 all email messages sent, 80% of them are spam and 20% of them are not
 spam. The success of the filter depends on the prior values.</p>
-<p>\[P\left(E\middle|\ S\right)\], the probability that event E occurs in a spam emails.</p>
-<p>\[P\left(E|\lnot S\right)\], the probability that event E occurs in non-spam emails.</p>
+<p> <span class = "smaller-text">\[P\left(E\middle|\ S\right)\]</span>, the probability that event E occurs in a spam emails.</p>
+<p> <span class = "smaller-text">\[P\left(E|\lnot S\right)\]</span>, the probability that event E occurs in non-spam emails.</p>
   
 <h3>The Implementation</h3>
 <p>We have tried to keep the implementation quite simple and therefore not accounted for things like filtering small often used words, nor does the implementation calculate probabilities of a word in the frequency list not appearing in spam.  We have also filtered things like telephone numbers, which could be used to identify spam.</p>
@@ -1644,11 +1644,7 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a hr
 </div>
 <div class="cell markdown" id="1DBTOQpJbSqE">
 <h3>5. Visualise the Data</h3>
-<p>Let's use a Word Cloud library to visualise the most common words contained in spam messages.</p>
-<p><a
-href="https://drive.google.com/open?id=1lVRGHtMB1AMJf-JSi7MmcHbZB_BvBhGC">Example
-of a Word Cloud Image</a></p>
-<p>[3 Marks]</p>
+<p>To have a better visualisation of the data, I sued a Word Cloud libary to show the most common words contained in spam messages.</p>
 </div>
 <div class="cell code"
 data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:635}"
@@ -1677,61 +1673,17 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a hr
 </div>
 <div class="output display_data">
 <p><img
-src="vertopal_dd80f328aab2483d9aa4ba7f428eabb9/0b3d3d3639cc9df9bf8c7e6d9b6afa300232d5a8.png" /></p>
+src="wordcloud.png" /></p>
 </div>
 </div>
 <div class="cell markdown" id="bVpFmJ5kX_HG">
-<h3>6.  Calculate \[P\left(E\middle| S\right)\] and \[P\left(E|\lnot S\right)\]</h3>
-<p>Next create a new DataFrame named word_prob that gives the probability of each word being found in a spam and ham message.</p>
+<h3>6.  Calculate <span class = "smaller-text">\[P\left(E\middle| S\right)\]</span> and <span class = "smaller-text">\[P\left(E|\lnot S\right)\]</span></h3>
+<p>Next, I have created a new DataFrame named word_prob that gives the probability of each word being found in a spam and ham message.</p>
 <p>To calculate the probability of a word being spam you divide the number of times the word was found in spam by the total number of spam messages, likewise to calculate the probability of each word being found in a ham message you divide the number of times the word was found in a ham message by the total number of ham messages.</p>
-<p>If a word was not found in ham or spam it will cause problems later because the probability calculated will be zero. Therefore, use a pseudocount k and estimate the probability of seeing the word. This is known as smoothing and results in the following formula when k = 0.5, for example.</p>
-<p>\[P\left(E\middle| S\right)\] = (number of spams containing the word + k) / (total number of spam messages + 2 * k).</p>
-<p>Likewise, for \[P\left(E|\lnot S\right)\].</p>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Word</th>
-      <th>P(E|S)</th>
-      <th>P(E|¬S)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>go</td>
-      <td>0.053322</td>
-      <td>0.050055</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>until</td>
-      <td>0.011364</td>
-      <td>0.004275</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>jurong</td>
-      <td>0.002622</td>
-      <td>0.000138</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>point</td>
-      <td>0.002622</td>
-      <td>0.002344</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>crazy</td>
-      <td>0.011364</td>
-      <td>0.002344</td>
-    </tr>
-  </tbody>
-</table>
-</p>
-<p>[2 Marks]</p></p>
-</div>
+<p>If a word was not found in ham or spam it will cause problems later because the probability calculated will be zero. Therefore, I used a pseudocount k and estimate the probability of seeing the word for smoothing and results in the following formula when k = 0.5:</p>
+<p><span class = "smaller-text">\[P\left(E\middle| S\right) = (number of spams containing the word + k) / (total number of spam messages + 2 * k)\]</span></p>
+<p>And likewise for \[P\left(E|\lnot S\right)\]</p>
+
 <div class="cell code"
 data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:424}"
 id="U2kaXmftX_HH" data-outputId="65dcf353-d443-476d-b3a4-5fe803410a3b">
@@ -1747,7 +1699,7 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a h
 <span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>word_prob</span></code></pre></div>
 <div class="output execute_result" data-execution_count="75">
-
+<p>Output:</p>
   <div id="df-501878a7-5617-43f1-a232-a587bef60242" class="colab-df-container">
     <div>
 <style scoped>
@@ -2056,21 +2008,11 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a h
 </div>
 <div class="cell markdown" id="iagF4brWA5QO">
 <h3>7. Checking the 'spamliness' of a single word</h3>
-<p>Now that we have trained the model, we will test the model.  Before we use the test_data, first let’s check how the model calculates the spamliness of a single word.  This is where we use the Bayes Theorem formula.  We have already calculated \[P\left(E\middle| S\right)\] and \[P\left(E|\lnot S\right)\], so we can just extract these values from the word_prob DataFrame.</p>
-<p>We need to decide on the prior values \[P\left(S\right)\] and \[P\left(\lnot S\right)\], this is where you can experiment and tweak the model, in this example the prior value for spam was set to \[0.4\] and the prior value for not spam or ham was set to \[0.6\].</p>
-<h3>
-\[P\left(S\middle|\ E\right)=\frac{P\left(E\middle|\ S\right)P\left(S\right)}{P\left(E\middle|\ S\right)P\left(S\right)+P\left(E|\lnot S\right)P\left(\lnot S\right)}\]
-</h3>
-<pre>
-Output
-Word = ['free']
-P(E|S) = [0.29108392]
-P(E|¬S) = [0.01365141]
-P(S|E) = [0.93427577]
-P(¬S|E) = [0.06572423]
-</pre>
-<p>[2 Marks]</p>
-</div>
+<p>Now that we have trained the model, we will test the model.  Before we use the test_data, first we check how the model calculates the spamliness of a single word.  This is where we use the Bayes Theorem formula.  We have already calculated (span class = "smaller-text">\[P\left(E\middle| S\right)\]</p> and <span class = "smaller-text">\[P\left(E|\lnot S\right)\]</span>, so we can just extract these values from the word_prob DataFrame.</p>
+<p>I have chosen for the probability of the word being spam to be <span class = "smaller-text">\[P\left(S\right) = 0.3\]</span> and probability of the word not being spam or ham to be <span class = "smaller-text">\[P\left(\lnot S\right) = 0.7\]</span></p>
+<p> And I aim to find:
+<span class = "smaller-text">\[P\left(S\middle|\ E\right)=\frac{P\left(E\middle|\ S\right)P\left(S\right)}{P\left(E\middle|\ S\right)P\left(S\right)+P\left(E|\lnot S\right)P\left(\lnot S\right)}\]</span>
+</p>
 <div class="cell code"
 data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
 id="NS-KBvz4-YhJ" data-outputId="8ab63458-509d-4ad4-e1e7-a3c240844ce2">
@@ -2091,6 +2033,7 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a h
 <span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;P(¬S|E) =&quot;</span>, not_se)</span>
 <span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>function(<span class="st">&#39;to&#39;</span>)</span></code></pre></div>
+<p>Output:</p>
 <div class="output stream stdout">
 <pre><code>Word = [&#39; to &#39;]
 P(E|S) = 0.0389585563541826
@@ -2105,11 +2048,9 @@ P(¬S|E) = 0.6602453616949032
 <p>To check the spamliness of several words contained in a message we multiply the probabilities.  The model assumes the words appear as independent events hence the naïve Bayes.  In reality of course, words are not independent events, but the model still performs well.  So we use the assumption that the words appear independently, and hence we multiply probabilities, so
 \[P(S\,|\, x_1,\dots,x_n)\approx \frac{P(S)\underset{i=1}{\overset{n}{\prod}}P(x_i | S)}{P(S)\underset{i=1}{\overset{n}{\prod}}P(x_i | S)+P(\neg S)\underset{i=1}{\overset{n}{\prod}}P(x_i | \neg S)}\]
 
-Calculate the probability for each word in a message being spam, you might want to store the calculations in a list named prob_spam.  Likewise create a list for each word not being spam.
-Then multiply the probabilities and compare the results.  If the result of multiplying the probabilities for spam is greater than the result of multiplying the probabilities for not spam, then you assume the message as spam.
+In this section, I calculate the probability for each word in a message being spam, and stored the calculations in a list named prob_spam and doing the same for each word not being spam.
+Then I multiply the probabilities and compare the results.  If the result of multiplying the probabilities for spam is greater than the result of multiplying the probabilities for not spam, then we can assume the message as spam.
 </p>
-<p>If you have a word in your message that is not in the word_prob DataFrame then you can't get the probability.  Skip any words in the message that are not in the word_prob DataFrame.</p>
-<p>[2 Marks]</p>
 </div>
 <div class="cell code" id="PGK027jUNlU7">
 <div class="sourceCode" id="cb13"><pre
@@ -2130,11 +2071,11 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a h
 </div>
 <div class="cell markdown" id="oE6CsYaev-w_">
 <h3>9. Avoiding floating point underflow</h3>
-<p>Our aim is to compare two probabilities \[P(S|x_1,\dots,x_n)\] with \[P(\neg S|x_1,\dots,x_n),\] according to our model introduced in Section 8, both probabilities share a common denominator which does not affect comparison. Hence we will calculate numerators only, which are proportional to \[P(S|x_1,\dots,x_n)\] and \[P(\neg S|x_1,\dots,x_n).\]
+<p>Our aim is to compare two probabilities <span class = "smaller-text">\[P(S|x_1,\dots,x_n)\]</span> with <span class = "smaller-text">\[P(\neg S|x_1,\dots,x_n),\]</span> according to the model introduced in Section 8, both probabilities share a common denominator which does not affect comparison. Hence I am only taking the numerators into the account as they are proportional to <span class = "smaller-text">\[P(S|x_1,\dots,x_n)\]</span> and <span class = "smaller-text">\[P(\neg S|x_1,\dots,x_n).\]</span>
 </p>
 <p>Multiplying a set of small probabilities could result in a floating-point error.  This is where the product becomes too small to be represented correctly.  To avoid this we can take the logarithm of the probabilities and add them.  
 
-To avoid multiplication of small numbers, we use the following property of \[\log(x):\]</p>
+To avoid multiplication of small numbers, we use the following property of <span class = "smaller-text">\[\log(x):\]</span></p>
 <p><span
 class="math display">log (<em>a</em>⋅<em>b</em>) = log (<em>a</em>) + log (<em>b</em>)</span>
 <p>i.e. the log of the product is equal to the sum of logs (so instead
@@ -2148,7 +2089,6 @@ class="math display">log (<em>P</em>(<em>S</em>)) + log (<em>P</em>(<em>
 class="math display">log (<em>P</em>(<em>S</em>)) + log (<em>P</em>(<em>x</em><sub>1</sub>|<em>S</em>)) + … + log (<em>P</em>(<em>x</em><sub><em>n</em></sub>|<em>S</em>))</span>
 <p>and </p> <span
 class="math display">log (<em>P</em>(¬<em>S</em>)) + log (<em>P</em>(<em>x</em><sub>1</sub>|¬<em>S</em>)) + … + log (<em>P</em>(<em>x</em><sub><em>n</em></sub>|¬<em>S</em>))</span></p>
-<p>Change the equation so that logs are used. </p> <p>[1 Mark]</p></p>
 </div>
 <div class="cell code"
 data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:70}"
@@ -2186,6 +2126,7 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a h
 <span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">&quot;spam&quot;</span></span>
 <span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a>function2(clean.sample(n<span class="op">=</span><span class="dv">1</span>), <span class="va">True</span>)</span></code></pre></div>
+<p>Output:</p>
 <div class="output stream stdout">
 <pre><code>log of x given s = -56.100090209565685
 log of x given ¬s = -48.61651313232384
