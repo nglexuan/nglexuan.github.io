@@ -223,6 +223,9 @@
     code span.vs { color: #4070a0; } /* VerbatimString */
     code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    .smaller-text {
+            font-size: 12px;
+        }
   </style>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
@@ -245,10 +248,10 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a hr
 <h1>Introduction</h1>
 <p>In this assignment I will be using Naïve Bayes to implement a relatively simple spam filter.  A small data will be used to to train and test the model. </p>
 <p>The messages within the datasets have already been classified as ham (not spam), or spam. </p>
-<p>The implementation of a Naïve Bayes Spam Filter is relatively straight forward using scikit-learn, however, this library hides the implementation details.  Therefore, this task does not permit the use of the scikit-learn library or similar libraries that perform similar tasks.  We hope that this will help with your understanding of the implementation details.</p>
+<p>The implementation of a Naïve Bayes Spam Filter is relatively straight forward using scikit-learn, however, this library hides the implementation details.  Therefore, this task does not permit the use of the scikit-learn library or similar libraries that perform similar tasks.</p>
 <p>Bayes Theorem can give us the probability that a message is spam S for a given event E</p>
 <h1>
-\[P\left(S\middle|\ E\right)=\frac{P\left(E\middle|\ S\right)P\left(S\right)}{P\left(E\middle|\ S\right)P\left(S\right)+P\left(E|\lnot S\right)P\left(\lnot S\right)}\]
+<span class = "smaller-text">\[P\left(S\middle|\ E\right)=\frac{P\left(E\middle|\ S\right)P\left(S\right)}{P\left(E\middle|\ S\right)P\left(S\right)+P\left(E|\lnot S\right)P\left(\lnot S\right)}\]</span>
 </h1>
 <p>Where:</p>
 <p>\[P\left(S\middle|\ E\right)\], the probability that the message is spam given the event occurred.</p>
@@ -257,22 +260,18 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a hr
 <p>Note: <span class="math inline"><em>P</em>(<em>S</em>)</span> and
 <span class="math inline"><em>P</em>(¬<em>S</em>)</span> are prior
 values, or prior beliefs. This value could be calculated using the
-number of spam and number of ham classifications in the data set. You
-could also use arbitrary values, for example; you could assume that of
+number of spam and number of ham classifications in the data set. Arbitrary values could also be used, for example; it could be assumed that of
 all email messages sent, 80% of them are spam and 20% of them are not
 spam. The success of the filter depends on the prior values.</p>
 <p>\[P\left(E\middle|\ S\right)\], the probability that event E occurs in a spam emails.</p>
 <p>\[P\left(E|\lnot S\right)\], the probability that event E occurs in non-spam emails.</p>
-<h3>Additional Libraries</h3>
-<p>As you progress through the exercises you may need additional libraries that are not installed, for example when visualising the data you may need to import WordCloud.  If you use [Google Colaboratory](https://colab.research.google.com/notebooks/intro.ipynb) the necessary libraries will be available, which will save you having to pip install.  </p>
+  
 <h3>The Implementation</h3>
-<p>We have tried to keep the implementation quite simple and therefore not accounted for things like filtering small often used words, nor does the implementation calculate probabilities of a word in the frequency list not appearing in spam.  We have also filtered things like telephone numbers, which could be used to identify spam.   The final exercise allows you to make recommendations how the model could be improved.    </p>
+<p>We have tried to keep the implementation quite simple and therefore not accounted for things like filtering small often used words, nor does the implementation calculate probabilities of a word in the frequency list not appearing in spam.  We have also filtered things like telephone numbers, which could be used to identify spam.</p>
 </div>
 <div class="cell markdown" id="ep6k47M5X_Gw">
 <h3>1.  Read the dataset into a dataframe and explore</h3>
-<p>Start by importing pandas and read the dataset into a DataFrame named df.  Output the first 20 rows of the dataframe to get a general feel of how the data is structured.</p>
-<p>You may encounter the error: UnicodeDecodeError: 'utf-8' codec can't decode bytes in position 135-136: invalid continuation byte.  You don't need to edit the datafile.  I was able to successfully read in the datafile by changing the encoding to latin-1.</p>
-<p>[1 Mark]</p>
+<p>I start by importing pandas and read the dataset into a DataFrame named df. An error of "error: UnicodeDecodeError: 'utf-8' codec can't decode bytes in position 135-136: invalid continuation byte" was encountered so I changed the encoding to latin-1 and succeeded reading the datafile.
 </div>
 <div class="cell code"
 data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:677}"
@@ -282,6 +281,7 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a hr
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">&quot;/content/drive/MyDrive/Colab Notebooks/google colab data science labs/spam.csv&quot;</span>, encoding <span class="op">=</span> <span class="st">&quot;latin-1&quot;</span>)</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>df.head(<span class="dv">20</span>)</span></code></pre></div>
+<p>And the output is as follows:</p>
 <div class="output execute_result" data-execution_count="70">
 
   <div id="df-e48a5ceb-5341-47e4-8f91-2f0b4e6e2300" class="colab-df-container">
@@ -687,45 +687,8 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a hr
 </div>
 <div class="cell markdown" id="W1HwlygYX_G2">
 <h3>2. Clean the data</h3>
-<p>We are only interested in words, clean the data so that all punctuations are removed.  You should be left with a dataset that only contains alpha characters (including spaces).  You should also ensure all the words are lowercase.  Store the cleaned data into a DataFrame named clean.</p>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Category</th>
-      <th>Message</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>ham</td>
-      <td>go until jurong point crazy available only in ...</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>ham</td>
-      <td>ok lar joking wif u oni</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>spam</td>
-      <td>free entry in  a wkly comp to win fa cup final...</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>ham</td>
-      <td>u dun say so early hor u c already then say</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>ham</td>
-      <td>nah i dont think he goes to usf he lives aroun...</td>
-    </tr>
-  </tbody>
-</table>
-<p>[2 Marks]</p>
-</div>
+<p>We are only interested in words, so I cleaned the data so that all punctuations are removed and we are only left with alpha characters in lowercase.
+<p>This is the cleaned data named "clean"</p>
 <div class="cell code"
 data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:458}"
 id="JqppPCO_X_G3" data-outputId="54c791b2-ce13-4a2a-8b97-2410c2e5758a">
@@ -1039,11 +1002,7 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a hr
 <div class="cell markdown" id="CLTcpAMvX_G8">
 <h3>3. Split the Data</h3>
 <p>
-<p>Split the data into two random samples, one for training the model
-and the other for testing the model. Create DataFrames named train_data
-and test_data. The train_data DataFrame should contain 75% of the data
-and the test_data DataFrame the remaining 25%.<p></p>
-<p>[1 Mark]</p>
+<p>I then split the data into two random samples as we will be conducting two tests. One will be called train_data (75%) and the other test_data (25%)</p>
 </div>
 <div class="cell code"
 data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:424}"
@@ -1070,6 +1029,7 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a hr
         text-align: right;
     }
 </style>
+<p>Output:</p>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1351,88 +1311,8 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a hr
 </div>
 <div class="cell markdown" id="EU8azvVgX_HB">
 <h3>4. Create a Word Frequency DataFrame</h3>
-<p>Create a new DataFrame named word_freq that contains each word with the number of times it appears in a spam and a ham message.  You should use the train_data not the test_data.</p>
-<p>Below is an example of what the DataFrame would look like, <i>note</i> that your values may differ depending on how the data was split.</p>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Word</th>
-      <th>#Spam</th>
-      <th>#Ham</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>0</td>
-      <td>go</td>
-      <td>27</td>
-      <td>196</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>until</td>
-      <td>4</td>
-      <td>17</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>jurong</td>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>point</td>
-      <td>1</td>
-      <td>9</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>crazy</td>
-      <td>4</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <td>7253</td>
-      <td>salesman</td>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <td>7254</td>
-      <td>pity</td>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <td>7255</td>
-      <td>soany</td>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <td>7256</td>
-      <td>suggestions</td>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <td>7257</td>
-      <td>bitching</td>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-  </tbody>
-</table>
-<p>[2 Marks]</p>
-</div>
+<p>A new DataFrame named word_freq is created from train_data to show the number of times each word appears in a spam and ham message.
+
 <div class="cell code"
 data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:424}"
 id="SqlKk77nKEUc" data-outputId="40de99d6-fecd-478b-d992-1e6192c67a31">
@@ -1455,7 +1335,7 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a hr
 <span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>word_freq</span></code></pre></div>
 <div class="output execute_result" data-execution_count="73">
-
+<p>Output:</p>
   <div id="df-f88f5328-21f7-427f-ab35-0f1a41c4b492" class="colab-df-container">
     <div>
 <style scoped>
