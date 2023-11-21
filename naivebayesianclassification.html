@@ -2008,7 +2008,7 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a h
 </div>
 <div class="cell markdown" id="iagF4brWA5QO">
 <h3>7. Checking the 'spamliness' of a single word</h3>
-<p>Now that we have trained the model, we will test the model.  Before we use the test_data, first we check how the model calculates the spamliness of a single word.  This is where we use the Bayes Theorem formula.  We have already calculated (span class = "smaller-text">\[P\left(E\middle| S\right)\]</p> and <span class = "smaller-text">\[P\left(E|\lnot S\right)\]</span>, so we can just extract these values from the word_prob DataFrame.</p>
+<p>Now that we have trained the model, we will test the model.  Before we use the test_data, first we check how the model calculates the spamliness of a single word.  This is where we use the Bayes Theorem formula.  We have already calculated <span class = "smaller-text">\[P\left(E\middle| S\right)\]</p> and <span class = "smaller-text">\[P\left(E|\lnot S\right)\]</span>, so we can just extract these values from the word_prob DataFrame.</p>
 <p>I have chosen for the probability of the word being spam to be <span class = "smaller-text">\[P\left(S\right) = 0.3\]</span> and probability of the word not being spam or ham to be <span class = "smaller-text">\[P\left(\lnot S\right) = 0.7\]</span></p>
 <p> And I aim to find:
 <span class = "smaller-text">\[P\left(S\middle|\ E\right)=\frac{P\left(E\middle|\ S\right)P\left(S\right)}{P\left(E\middle|\ S\right)P\left(S\right)+P\left(E|\lnot S\right)P\left(\lnot S\right)}\]</span>
@@ -2132,22 +2132,9 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a h
 log of x given ¬s = -48.61651313232384
 </code></pre>
 </div>
-<div class="output execute_result" data-execution_count="84">
-<div class="sourceCode" id="cb16"><pre
-class="sourceCode json"><code class="sourceCode json"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;type&quot;</span><span class="fu">:</span><span class="st">&quot;string&quot;</span><span class="fu">}</span></span></code></pre></div>
-</div>
-</div>
 <div class="cell markdown" id="ZtiGi5X37b0G">
 <h3>10. Testing the Model</h3>
-<p>Now that we have tested the model using simple messages.  Let’s test the model using the messages from the test_set.  You should implement counters that displays how your model has performed and calculate the accuracy of the model.</p>
-<pre>
-match_spam 173
-match_ham 843
-thought_ham_is_spam 3
-thought_spam_is_ham 357
-Accuracy: 0.7383720930232558
-</pre>
-<p>[3 Marks]</p>
+<p>Now that we have tested the model using simple messages. We test the model using the messages from the test_set.  I will now test accuracy of the model using the messages from test_data.</p>
 </div>
 <div class="cell code"
 data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
@@ -2185,8 +2172,6 @@ Accuracy:  0.9741564967695621
 </div>
 <div class="cell markdown" id="fwGqqNBzDh3y">
 <h3>11. Improvements</h3>
-<p>Give some suggestions or recommendations on how the accuracy of the model could be improved.</p>
-<p>[1 Mark]</p>
 </div>
 <div class="cell markdown" id="KM5hnY3WDA2f">
 <p>A bigger sample size should improve the accuracy, but overall I think
