@@ -9,6 +9,10 @@
             font-family: Georgia, serif;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
         }
 
         /* Menu Button Styles */
@@ -71,16 +75,26 @@
         }
 
         header {
-            text-align: left;
-            align-items: center;
+            text-align: center;
             padding: 10px;
             background-color: #f2f2f2;
             height: 180px;
             margin-top: 100px;
+            width: 90%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         main {
             padding: 20px;
+            width: 90%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         section {
@@ -88,22 +102,43 @@
             padding: 20px;
             background-color: white;
             border: 1px solid #ddd;
+            width: 100%;
+            max-width: 900px;
+            box-sizing: border-box;
+            text-align: center;
         }
 
-        h2 {
+        h1, h2 {
             color: #2c3e50;
             margin-top: 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        p {
+            text-align: center;
+            width: 100%;
         }
 
         footer {
             text-align: center;
             padding: 10px;
             background-color: #f2f2f2;
+            width: 100%;
         }
 
         ul {
             list-style-type: square;
             padding-left: 20px;
+            display: inline-block;
+            text-align: left;
+        }
+
+        /* Centered wrapper for lists */
+        .list-wrapper {
+            display: flex;
+            justify-content: center;
+            width: 100%;
         }
     </style>
 </head>
@@ -131,6 +166,10 @@
         <p>A website created to document my growth, highlight my projects, and track the progress that fuels my aspiration to advance in the programming field.</p>
     </header>
 
+    <main>
+        <!-- Your existing sections would go here -->
+        <!-- Since there are no sections in your original code, I'll leave this empty -->
+    </main>
 
     <footer>
         <p>&copy; 2026 Ashley Ng Le Xuan. All rights reserved.</p>
