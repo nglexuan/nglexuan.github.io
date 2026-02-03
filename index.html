@@ -5,10 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ashley Ng Le Xuan's Portfolio</title>
     <style>
-        /* Add your CSS styles here */
         body {
             font-family: Georgia, serif;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Menu Button Styles */
+        .menu-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+
+        .menu-button {
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .menu-dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 4px;
+            width: 200px;
+            margin-top: 5px;
+        }
+
+        .menu-dropdown.active {
+            display: block;
+        }
+
+        .menu-dropdown ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu-dropdown li {
+            border-bottom: 1px solid #eee;
+        }
+
+        .menu-dropdown li:last-child {
+            border-bottom: none;
+        }
+
+        .menu-dropdown a {
+            display: block;
+            padding: 10px 15px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .menu-dropdown a:hover {
+            background-color: #f5f5f5;
         }
 
         header {
@@ -24,75 +83,110 @@
             padding: 20px;
         }
 
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+
         footer {
             text-align: center;
             padding: 10px;
             background-color: #f2f2f2;
         }
-        ul {
-            list-style-type: square; /* Set the list style to square */
-            padding-left: 20px; /* Add some left padding for spacing */
-        }
 
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
     </style>
 </head>
 
 <body>
+    <!-- Menu Button -->
+    <div class="menu-container">
+        <button class="menu-button" id="menuButton">
+            ☰ Menu
+        </button>
+        <div class="menu-dropdown" id="menuDropdown">
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
 
     <header>
         <h1>Ashley Ng Le Xuan's Portfolio</h1> 
         <p>MSc Risk Management and Financial Engineering | Imperial College London | 2025–2026</p>
         <p>BSc Actuarial Science and Mathematics | University of Manchester | 2022–2025</p>
-        <p> A website created to document my growth, highlight my projects, and track the progress that fuels my aspiration to advance in the programming field.</p>
-        
-        
+        <p>A website created to document my growth, highlight my projects, and track the progress that fuels my aspiration to advance in the programming field.</p>
     </header>
 
     <main>
-        <h1><a href = https://nglexuan.github.io/CV.html>CV</a></h1>
-        <p> updated as of 3rd September 2025</p>
-        
-        <h1>Python</h1>
-        <p>Since Python was not part of my undergraduate curriculum, I took the initiative to undertake a small project during the summer.</p>
-        <u1>
-            <li> <b>July 2023</b></li>
-                <p><a href = "https://nglexuan.github.io/naivebayesianclassification.html">Naive Bayesian Classification</a> done using pandas in Python</p>       
-        </u1>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Information about yourself goes here.</p>
+        </section>
 
-        <h1>R and LaTeX</h1>
-        <p>The majority of my undergraduate analyses were performed in R and documented using LaTeX.</p>
-        <u1>
-            <li> <b>October 2023</b></li>
-                <p><a href = "https://nglexuan.github.io/practicalstatistics1.html">Analysis on White Wine</a> done using RStudio and LATEX</p>                
-            
-            <li> <b>November 2023</b></li>                
-                <p><a href = "https://nglexuan.github.io/practicalstatistics2.html">Analysis on Road Casualties and Mode of Transport</a> done using RStudio and LATEX</p>        
-            
-            <li> <b>December 2023</b></li>                
-                <p><a href = "https://nglexuan.github.io/practicalstatistics3.html">Goodness of Fit and Monte Carlo Sampling</a> done using RStudio and LATEX</p>    
+        <section id="education">
+            <h2>Education</h2>
+            <p>Your educational background details.</p>
+        </section>
 
-            <li> <b>March 2024</b></li>                
-                <p><a href = "https://nglexuan.github.io/contingencies1.html">Life Assurance Analysis</a> done using RStudio and LATEX</p>    
-        
-        </u1>
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>Details about your projects.</p>
+        </section>
 
-        <h1>MATLAB</h1>
-        <p>During my final undergraduate year, I chose a MATLAB module to further develop and diversify my programming expertise.</p>
-        <u1>
-            <li> <b>December 2024</b></li>                
-                <p><a href = "https://nglexuan.github.io/bananapricesanalysis.html">Banana Prices Analysis</a> done using MATLAB and LATEX</p>    
-        </u1>
+        <section id="skills">
+            <h2>Skills</h2>
+            <p>Your technical and professional skills.</p>
+        </section>
 
-       
-        
-        
-    
-            
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Your contact information.</p>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2025 Ashley Ng Le Xuan. All rights reserved.</p>
     </footer>
+
+    <script>
+        // Simple menu toggle functionality
+        document.getElementById('menuButton').addEventListener('click', function() {
+            document.getElementById('menuDropdown').classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menuContainer = document.querySelector('.menu-container');
+            const menuButton = document.getElementById('menuButton');
+            const menuDropdown = document.getElementById('menuDropdown');
+            
+            if (!menuContainer.contains(event.target)) {
+                menuDropdown.classList.remove('active');
+            }
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.menu-dropdown a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('menuDropdown').classList.remove('active');
+            });
+        });
+    </script>
 
 </body>
 
